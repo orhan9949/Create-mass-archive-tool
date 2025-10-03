@@ -1,0 +1,116 @@
+.archive-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 20px;
+}
+.archive-page *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.archive-page__form {
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+}
+
+.archive-page__select-file {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #c3c4c7;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.archive-page__select-file label {
+    cursor: pointer;
+}
+
+.archive-page__input {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.archive-page__table {
+    position: relative;
+    margin-bottom: -100px;
+    border: 1px solid #c3c4c7;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.archive-page__item {
+    display: grid;
+    grid-template-columns: 50px 100px 1fr 1fr;
+}
+
+.archive-page__download--file{
+    margin-top: 20px;
+}
+
+.archive-page__item-head .archive-page__item > div {
+    color: #2c3338;
+    border-bottom: 1px solid #c3c4c7;
+    border-right: none;
+    font-weight: 500;
+}
+.archive-page__item:nth-child(odd) {
+    background-color: #f6f7f7;
+}
+
+.archive-page__item > div {
+    padding: 6px;
+}
+
+.archive-page__item-body{
+    max-height: 50vh;
+    overflow: auto;
+}
+
+.archive-page__item--count, .archive-page__item--id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.archive-page__preloader {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: #e84f35;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.archive-page__preloader-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #0080c8;
+    z-index: 0;
+    transition: .5s ease-in-out;
+}
+
+.archive-page__preloader-text {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 3px 0;
+    display: block;
+    width: fit-content;
+    color: #ffffff;
+    font-weight: 600;
+}
